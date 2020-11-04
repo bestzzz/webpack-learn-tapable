@@ -1,0 +1,11 @@
+{
+  "name": "webpack-learn-tapable",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bestzzz/webpack-learn-tapable.git",
+  "author": "左钊 <zuozhao@mmears.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tapable": "^2.0.0"
+  }
+}
