@@ -39,7 +39,7 @@ class AsyncSeriesWaterfallHook { // 钩子是同步的
 
   promise(...args) {
     const [first, ...other] = this.task;
-    return other.reduce((res, cur) => res.then(() => cur(...args)), first(...args));
+    return other.reduce((res, cur) => res.then(res => cur(res)), first(...args));
   }
 }
 

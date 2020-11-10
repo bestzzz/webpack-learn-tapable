@@ -21,7 +21,7 @@ class Lesson {
     this.hooks.arch.tapAsync('node', (name, cb) => {
       setTimeout(() => {
         console.log('node', name);
-        cb('error', 'res');
+        cb(null, 'res');
       }, 2000);
     })
 
@@ -36,15 +36,15 @@ class Lesson {
     //   return new Promise((resolve, reject) => {
     //     setTimeout(() => {
     //       console.log('node', name);
-    //       resolve();
+    //       resolve('res');
     //     }, 1000);
     //   });
     // });
 
-    // this.hooks.arch.tapPromise('react', (name) => {
+    // this.hooks.arch.tapPromise('react', (data) => {
     //   return new Promise((resolve, reject) => {
     //     setTimeout(() => {
-    //       console.log('react', name);
+    //       console.log('react', data);
     //       resolve();
     //     }, 1000);
     //   });
